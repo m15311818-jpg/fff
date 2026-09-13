@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Saif Runner - لعبة الجري اللانهائي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- شاشة البداية -->
+  <div id="startScreen" class="screen">
+    <h1 class="game-title">SAIF RUNNER</h1>
+    <p class="designer">تصميم: سيف</p>
+    <button id="startBtn" class="btn">ابدأ اللعب</button>
+    <p class="hint">استخدم الأسهم ← → للتحرك، ↑ للقفز، ↓ للانزلاق</p>
+  </div>
+
+  <!-- شاشة اللعب -->
+  <div id="gameScreen" class="screen hidden">
+    <div id="scoreBoard">
+      <span>النقاط: </span><span id="score">0</span>
+    </div>
+    <div id="coinBoard">
+      <span>🪙 </span><span id="coins">0</span>
+    </div>
+    <div id="controls">
+      <button class="ctrl-btn" data-action="left">◀</button>
+      <button class="ctrl-btn" data-action="jump">▲</button>
+      <button class="ctrl-btn" data-action="slide">▼</button>
+      <button class="ctrl-btn" data-action="right">▶</button>
+    </div>
+  </div>
+
+  <!-- شاشة النهاية -->
+  <div id="gameOverScreen" class="screen hidden">
+    <h2>انتهت اللعبة!</h2>
+    <p>نقاطك: <span id="finalScore">0</span></p>
+    <p>عملاتك: <span id="finalCoins">0</span></p>
+    <button id="restartBtn" class="btn">العب مرة أخرى</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
